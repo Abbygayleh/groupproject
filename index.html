@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="stylesheet.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Player Information</title>
+</head>
+<body>
+    <!-- Player Information Form -->
+    <h1>Player information</h1>
+    <p>Please fill out the form with appropriate information</p>
+    <form method="post" action="#" class="player-form" id="registrationForm">
+        <!-- Fieldset for basic personal information -->
+        <fieldset> 
+            <label for="Fname">First Name</label><input type="text" id="Fname" name="Fname" pattern=".{3,}" required title="First Name must be at least 3 characters">
+            <label for="Lname">Last Name</label><input type="text" id="Lname" name="Lname" pattern=".{3,}" required title="Last Nmae must be at least 3 characters">
+        </fieldset>
+        <!-- Fieldset for birthdate, gender, and age -->
+        <fieldset>
+            <label for="DOB">Date of Birth</label><input type="date" id="DOB" name="DOB" onchange="calculateAge()" required>
+            <label for="Gender">Gender</label><select id="Gender" name="Gender"><option>Male</option> <option>Female</option></select>
+            <label for="age">Age</label> <input type="number" id="age" name="result" disabled>
+        </fieldset>
+        <!-- Fieldset for email and education -->
+        <fieldset>
+            <label for="mail">Email Address</label><input type="email" pattern="[a-zA-Z0-9._%+-]+@gmail\.com$" id="mail" name="mail">
+            <label for="edu">Education Level</label> <textarea id="edu" name="edu" required></textarea>
+        </fieldset> 
+        <!-- Buttons for form actions -->
+        <button type="button" onclick="Register()" class="cool-button">Register</button>
+        <button type="button" onclick="PlayGame()" class="cool-button" id="playbtn" disabled>Start</button>
+        <button type="button" onclick="CheckAnswer()" id="acceptButton" disabled>Accept</button>
+        <button type="button" onclick="PlayGame()" id="nextButton" disabled>Next</button>
+        <button onclick="findPercentageScore()" class="cool-button" type="button">End</button>
+        <button onclick="findPercentageScore()" class="cool-button" type="button">Percentage Score</button>        
+    </form>
+
+    <!-- Multiplication Game Section -->
+    <hr>
+    <table id="table">
+        <tr>
+            <td class="game-title">MULTIPLICATION GAME</td>
+        </tr>
+        <tr>
+            <td>
+                <center><img src="mathspic.jpg" alt="Image not found"></center>
+            </td>
+        </tr>
+        <tr>
+            <td>    
+                <form id="playareaForm">
+                    <label for="answer" class="answer-label">Your Answer:</label>
+                    <input type="number" id="answer" disabled>
+                </form>
+            </td>
+        </tr>
+    </table>
+    <div id="playarea">
+        <p id="equation" class="equation"></p>
+    </div>
+
+    <!-- Result and Statistics Display Area -->
+    <hr>
+    <textarea name="message" rows="10" cols="30" id="showpercentage"></textarea>
+    <br>
+    <textarea id="showallplayers"></textarea>
+
+    <!-- Charts Display Area -->
+    <div id="showcharts"></div>
+</body>
+</html>

@@ -1,0 +1,117 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    background-color: grey;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.player-form {
+    border: 2px solid white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    margin-bottom: 20px;
+    width: 60vw;
+}
+
+label {
+    display: block;
+    margin: 0.5rem 0;
+}
+
+h1, p {
+    margin: 1em auto;
+    text-align: center;
+}
+
+fieldset {
+    border: 0;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 0;
+    padding-right: 0;
+    border-bottom: 3px solid black;
+}
+
+input, textarea, select {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.cool-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+    color: black;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+table {
+    border: 5px solid;
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    display: none;
+    margin-bottom: 20px;
+}
+
+td {
+    padding: 8px;
+    text-align: center;
+}
+
+.game-title {
+    font-size: 50px;
+    font-family: fantasy;
+    text-align: center;
+}
+
+.answer-label {
+    font-size: 30px;
+    font-family: fantasy;
+}
+
+.equation {
+    font-size: 40px;
+    font-family: fantasy;
+}
+
+#playarea {
+    display: none;
+}
+
+#showcharts {
+    display: flex;
+    justify-content: space-around;
+}
+
+#showcharts table {
+    margin: 0 10px;
+}
+
+#showallplayers {
+    width: 80%;
+    height: 150px;
+}
